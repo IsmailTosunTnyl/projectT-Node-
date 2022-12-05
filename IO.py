@@ -48,7 +48,7 @@ class Lcd:
    
 if __name__ == "__main__":
     lcd = Lcd()
-    lcd.lcd("Merhaba","Dünya",5)
+    lcd.lcd("  Yasiyosun","    Bu Hayati",5)
    
    
     
