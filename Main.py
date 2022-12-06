@@ -21,8 +21,10 @@ while True:
                 #Servo(boxes[item['BoxID']]).servo(180)
                 #Lcd().lcd("Box is closed","Box ID: "+str(item['BoxID']),5)
             print(item)
+        print("******************")
     except Exception as e:
         print(e)
+        print("Error")
     finally:
         time.sleep(5)
    
