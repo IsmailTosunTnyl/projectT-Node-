@@ -15,5 +15,5 @@ class API():
         
 
 if __name__ == "__main__":
-    api = API(3,"http://192.168.1.31/node/3")
+    api = API(3,"http://192.168.1.38/node/3")
     print(api.get())

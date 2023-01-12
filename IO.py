@@ -9,13 +9,13 @@ sys.path.insert(1, 'lcd/')
 import drivers
 
 class Servo:
-    def __init__(self, pin):
+    def __init__(self, pin,aci=0):
         
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(pin,GPIO.OUT)
         self.p = GPIO.PWM(pin,50) # PIN 18 PWM 
-        self.p.start(self.duty(15))
+        self.p.start(self.duty(aci))
         time.sleep(1)
 
     def duty(self,aci): 
@@ -48,9 +48,33 @@ class Lcd:
    
 if __name__ == "__main__":
     lcd = Lcd()
-    lcd.lcd("  Yasiyosun","    Bu Hayati",5)
-   
+    delay = 0.9
+    delay2 = 0.01
+    lcd.lcd("Altan Yarragimi ","    Yee",3)
+    
+
+    Servo(18,90)
+    lcd.lcd(" Karilarinizi  ","    Saklayin",delay)
+    time.sleep(delay2)
+    Servo(18,170)
+    lcd.lcd(" Yapay ","    Zeka",delay)
+    time.sleep(delay2)
+    Servo(18,90)
+
+    lcd.lcd("Kilicdaroglu","Aday Olmasin",delay)
+    time.sleep(delay2)
+    Servo(18,170)
+    lcd.lcd(" Beni Sevin "," Cok Yanlizim",delay)
+    time.sleep(delay2)
+    Servo(18,90)
+    lcd.lcd(" Robot  ","    Yapin",delay)
+    time.sleep(delay2)
+    Servo(18,170)
+    lcd.lcd(" Robot  ","    Yapin",delay)
+    time.sleep(delay2)
+    Servo(18,90)
    
     
+     
         
      
